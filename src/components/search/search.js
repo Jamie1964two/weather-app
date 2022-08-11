@@ -3,7 +3,7 @@ import { useState } from "react";
 import { GEO_API_URL, geoApiOptions } from "../../api";
 
 const Search = (props) => {
-  //const [search, setSearch] = useState(null);
+  const [search, setSearch] = useState(null);
 
   const loadOptions = (inputValue) => {
     return fetch(
@@ -29,16 +29,18 @@ const Search = (props) => {
       .catch((err) => console.error(err));
   };
 
-  const handleOnChange = (entry) => {
-    console.log(entry);
-    props.setSearchData(entry);
+  const handleOnChange = (searchData) => {
+    // console.log(searchData));
+    setSearch(searchData);
+    props.setSearchData(searchData);
+    props.onSearchChange(searchData);
   };
 
   return (
     <AsyncPaginate
       placeholder="Search for city"
       debounceTimeout={1000}
-      value={props.searchData.label}
+      value={search}
       onChange={handleOnChange}
       loadOptions={loadOptions}
     />
