@@ -13,7 +13,7 @@ export const options = {
 	}
 };
 
-fetch('https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=38.5&lat=-78.5', options)
+/* fetch('https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=38.5&lat=-78.5', options)
 	.then(response => response.json())
 	.then(response => console.log(response))
-	.catch(err => console.error(err));
+	.catch(err => console.error(err)); */
