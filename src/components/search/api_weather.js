@@ -1,7 +1,8 @@
+
 export const options =  {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'c2bdc3e7d2mshb239e0726713aecp1b7733jsnd711a66f11a4',
+		'X-RapidAPI-Key': process.env.REACT_APP_APIKEY,
 		'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com'
 	}
 };

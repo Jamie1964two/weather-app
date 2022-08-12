@@ -11,13 +11,14 @@ function App() {
     label: "New York",
   });
   const [weather, setWeather] = useState(null);
-  const [weatherSearch, setWeatherSearch] = useState(null);
 
   const handleOnSearchChange = (searchData) => {
-    console.log(searchData);
 
     const lat = Math.round(searchData.lat * 10)/10;
     const lon = Math.round(searchData.lon * 10)/10;
+
+    console.log("options")
+    console.log(process.env.REACT_APP_APIKEY)
 
     fetch(`https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=${lon}&lat=${lat}`, options)
 
@@ -26,10 +27,6 @@ function App() {
     .then(response => setWeather(response))
     .catch(err => console.error(err));
 
-
-    console.log(weather)
-
-  //console.log(props.searchData.label);
   };
 
   return (
@@ -40,21 +37,10 @@ function App() {
           searchData={searchData}
           setSearchData={setSearchData}
         />
-        <button className="button" onClick={() => setWeatherSearch(searchData)}>
-          Get weather
-        </button>
       </div>
-      {/*       {weatherSearch && (
-        <WeatherData
-          weatherSearch={weatherSearch}
-          setWeather={setWeather}
-          weather={weather}
-        />
-      )} */}
+
       {weather && <div className="boxTwo">
         <WeatherData
-        // weatherSearch={weatherSearch}
-        // setWeather={setWeather}
           weather={weather}
         />
       </div> }

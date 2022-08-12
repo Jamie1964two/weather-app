@@ -1,5 +1,6 @@
  .boxOne {
-  width: 300px;
+  max-width: 290px;
+  width:300px;
   margin: 0px;
   padding:0px;
   display: flex;
@@ -10,17 +11,20 @@
 
 .boxOuter {
   max-width: 300px;
+  width: 300px;
   margin: 0px;
   padding:0px;
   display: flex;
   flex-direction: column;
   /* border: 1px solid green; */
   justify-content: center;
+  align-items: center;
 }
 
 
 .boxTwo {
   max-width: 300px;
+  width:300px;
   margin-top: 10px;
   display: flex;
   /* border: 1px solid blue;  */
