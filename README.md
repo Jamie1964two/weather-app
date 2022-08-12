@@ -1,5 +1,6 @@
 This is a react weather app. Coded by following along with Slobodan Gajic from his FreeCodeCamp youtube video https://www.youtube.com/watch?v=Reny0cTTv24&t=3293s
-It displays a autocomplete city name lookup and then fetches the current weather from weatherbit.io api.
+It displays a autocomplete city name lookup and then fetches the current weather for that location using weatherbit.io api.
+You'll need to get your own api key of course.
 
 
 
